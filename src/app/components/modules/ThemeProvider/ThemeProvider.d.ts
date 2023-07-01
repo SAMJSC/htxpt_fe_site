@@ -12,7 +12,7 @@ export declare function ThemeProvider({
   theme,
 }: ThemeProviderProps): JSX.Element;
 
-declare module "styled-components" {
+declare module 'styled-components' {
   interface DefaultTheme {
     font: {
       title1: string;
@@ -20,12 +20,18 @@ declare module "styled-components" {
       body1: string;
     };
     colors: {
-      primary: string;
-      gray100: string;
-      gray200: string;
-      gray300: string;
-      gray400: string;
+      primaryButton: string;
+      primaryHighlight: string;
+      primaryText: string;
+      secondaryText: string;
+      lightGrey: string;
+      white: string;
       background: string;
+      error: string;
+      success: string;
+      warning: string;
+      link: string;
+      errorToastBG: string;
     };
   }
 }

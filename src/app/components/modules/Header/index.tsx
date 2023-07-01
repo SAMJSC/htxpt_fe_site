@@ -1,7 +1,14 @@
-import React from "react";
+import React from 'react';
 
-const Header = () => {
-  return <div>Header</div>;
-};
+import Button from '@/app/components/atoms/Button';
+
+const Header = () => (
+  <div>
+    Header
+    <Button disabled size="lg" variant="outlined">
+      Button
+    </Button>
+  </div>
+);
 
 export default Header;
