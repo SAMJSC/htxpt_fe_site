@@ -1,0 +1,10 @@
+.next
+.vscode
+*.DS_Store
+.gitignore
+README.md
+.dockerignore
+LICENSE
+.docker
+.gitlab
+.git
