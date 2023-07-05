@@ -5,7 +5,7 @@ import Button from '@/app/components/atoms/Button';
 const Header = () => (
   <div>
     Header
-    <Button disabled size="lg" variant="outlined">
+    <Button size="lg" variant="contained">
       Button
     </Button>
   </div>
