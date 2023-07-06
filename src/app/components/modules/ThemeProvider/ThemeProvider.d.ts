@@ -14,24 +14,44 @@ export declare function ThemeProvider({
 
 declare module 'styled-components' {
   interface DefaultTheme {
-    font: {
-      title1: string;
-      title2: string;
-      body1: string;
+    fonts: {
+      title1Bold: ReturnType<typeof css>;
+      title1SemiBold: ReturnType<typeof css>;
+      title1Regular: ReturnType<typeof css>;
+      title2Bold: ReturnType<typeof css>;
+      title2SemiBold: ReturnType<typeof css>;
+      title2Regular: ReturnType<typeof css>;
+      title3Bold: ReturnType<typeof css>;
+      title3SemiBold: ReturnType<typeof css>;
+      title3Regular: ReturnType<typeof css>;
+      subTitleBold: ReturnType<typeof css>;
+      subTitleSemiBold: ReturnType<typeof css>;
+      subTitleRegular: ReturnType<typeof css>;
+      bodyBold: ReturnType<typeof css>;
+      bodySemiBold: ReturnType<typeof css>;
+      bodyRegular: ReturnType<typeof css>;
+      captionBold: ReturnType<typeof css>;
+      captionSemiBold: ReturnType<typeof css>;
+      captionRegular: ReturnType<typeof css>;
+      tagBold: ReturnType<typeof css>;
+      tagSemiBold: ReturnType<typeof css>;
+      tagRegular: ReturnType<typeof css>;
     };
     colors: {
+      background: string;
+      black: string;
+      darkGrey: string;
+      error: string;
+      errorToastBG: string;
+      lightGrey: string;
+      link: string;
       primaryButton: string;
       primaryHighlight: string;
       primaryText: string;
       secondaryText: string;
-      lightGrey: string;
-      white: string;
-      background: string;
-      error: string;
       success: string;
       warning: string;
-      link: string;
-      errorToastBG: string;
+      white: string;
     };
   }
 }
