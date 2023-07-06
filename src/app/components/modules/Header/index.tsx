@@ -1,14 +1,27 @@
-import React from 'react';
-
 import Button from '@/app/components/atoms/Button';
+import Icon from '@/app/components/atoms/Icon';
+import Input from '@/app/components/atoms/Input';
+import { theme } from '@/app/components/modules/ThemeProvider/theme';
 
-const Header = () => (
-  <div>
-    Header
-    <Button size="lg" variant="contained">
-      Button
-    </Button>
-  </div>
-);
+const Header = () => {
+  return (
+    <div>
+      Header
+      <Button size="md" variant="contained">
+        Button
+      </Button>
+      <Input
+        disable={false}
+        id="test"
+        required={false}
+        type="text"
+        errors={false}
+        label="User name"
+        showIcon={<Icon name="eyeOffOutline" color={theme.colors.darkGrey} size={24} />}
+        icon={<Icon name="eyeOutline" color={theme.colors.darkGrey} size={24} />}
+      />
+    </div>
+  );
+};
 
 export default Header;

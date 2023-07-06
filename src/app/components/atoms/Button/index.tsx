@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { ButtonProps } from '@/app/components/atoms/Button/interface';
 import { Container, Icon } from '@/app/components/atoms/Button/styled';
+import { ButtonProps } from '@/app/types/common';
 
 const Button = ({
   children,

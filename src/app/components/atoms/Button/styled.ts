@@ -1,6 +1,6 @@
 import { css, styled } from 'styled-components';
 
-import { ButtonProps } from '@/app/components/atoms/Button/interface';
+import { ButtonProps } from '@/app/types/common';
 
 export const Container = styled.div<ButtonProps>`
   ${({ size }) =>
