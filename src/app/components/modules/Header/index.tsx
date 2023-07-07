@@ -17,8 +17,8 @@ const Header = () => {
         type="text"
         errors={false}
         label="User name"
-        showIcon={<Icon name="eyeOffOutline" color={theme.colors.darkGrey} size={24} />}
-        icon={<Icon name="eyeOutline" color={theme.colors.darkGrey} size={24} />}
+        showIcon={<Icon name="ic_eye_outline" color={theme.colors.darkGrey} size={24} />}
+        icon={<Icon name="ic_eye_off_outline" color={theme.colors.darkGrey} size={24} />}
       />
     </div>
   );

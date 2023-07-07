@@ -2,7 +2,7 @@ import React from 'react';
 
 import { IconProps } from '@/app/components/modules/ThemeProvider/Icons';
 
-const IcEyeOutline = ({ size = 120, color }: IconProps): React.ReactElement => {
+const IcEyeOutline = ({ size = 24, color }: IconProps): React.ReactElement => {
   return (
     <svg
       width={size}

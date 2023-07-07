@@ -30,14 +30,16 @@ const Input = ({
   };
 
   const handleIconClicked = () => {
-    setShowPassword(!showPassword);
+    if (showIcon) {
+      setShowPassword(!showPassword);
+    }
   };
 
   return (
     <Container>
       <InputContainer>
         <InputField
-          type={showPassword ? 'password' : type}
+          type={!showPassword ? type : 'password'}
           id={id}
           disabled={disable}
           required={required}
@@ -48,18 +50,18 @@ const Input = ({
           autoCapitalize="off"
           spellCheck={false}
         />
-        {
-          <IconContainer onClick={handleIconClicked}>
-            {showPassword ? icon : showIcon}
-          </IconContainer>
-        }
+        {showPassword ? (
+          <IconContainer onClick={handleIconClicked}>{showIcon}</IconContainer>
+        ) : (
+          <IconContainer onClick={handleIconClicked}>{icon}</IconContainer>
+        )}
         <InputLabel errors={errors} htmlFor={id}>
           {label}
         </InputLabel>
       </InputContainer>
       {errors && (
         <ErrorMessage>
-          <Icon name="fieldError" color={theme.colors.darkGrey} size={16} />
+          <Icon name="ic_field_error" color={theme.colors.darkGrey} size={16} />
           {/* {errors.message} */}
           Số điện thoại chưa đăng ký
         </ErrorMessage>
