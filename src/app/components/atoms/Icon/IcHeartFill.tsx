@@ -11,7 +11,7 @@ const IcHeartFill = ({ size = 24 }: IconProps): React.ReactElement => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_718_2140)">
+      <g clipPath="url(#clip0_718_2140)">
         <g filter="url(#filter0_d_718_2140)">
           <path
             d="M12 7.69334C10 2.9989 3 3.4989 3 9.49893C3 15.499 12 20.4991 12 20.4991C12 20.4991 21 15.499 21 9.49893C21 3.4989 14 2.9989 12 7.69334Z"
@@ -20,9 +20,9 @@ const IcHeartFill = ({ size = 24 }: IconProps): React.ReactElement => {
           <path
             d="M12 7.69334C10 2.9989 3 3.4989 3 9.49893C3 15.499 12 20.4991 12 20.4991C12 20.4991 21 15.499 21 9.49893C21 3.4989 14 2.9989 12 7.69334Z"
             stroke="#FF0422"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
       </g>
@@ -34,9 +34,9 @@ const IcHeartFill = ({ size = 24 }: IconProps): React.ReactElement => {
           width="24"
           height="21.9609"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"

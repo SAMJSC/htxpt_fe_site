@@ -19,7 +19,7 @@ import IcSettingOutline from '@/app/components/atoms/Icon/IcSettingOutline';
 import IcShareOutline from '@/app/components/atoms/Icon/IcShareOutline';
 import IcUserOutline from '@/app/components/atoms/Icon/IcUserOutline';
 
-const ICONS = {
+export const ICONS = {
   ic_eye_outline: IcEyeOutline,
   ic_eye_off_outline: IcEyeOffOutline,
   ic_field_error: IcFieldError,

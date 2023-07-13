@@ -1,4 +1,6 @@
-import { FieldValues, UseFormRegister } from 'react-hook-form';
+import { InputHTMLAttributes } from 'react';
+
+import { ICONS } from '@/app/components/atoms/Icon';
 
 export type TestReturn = {
   data: {
@@ -21,33 +23,27 @@ export type MutationArg = {
   password: string;
 };
 
-export type ButtonVariant = 'contained' | 'outlined' | 'text';
-
+export type ButtonVariant = 'contained' | 'outlined' | 'text' | 'icon' | 'image';
 export type ButtonSize = 'sm' | 'md' | 'lg' | 'xl';
+export type ButtonRadius = 'none' | 'normal' | 'full';
 
-export type ButtonProps = {
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  icon?: keyof typeof ICONS;
+  image?: string;
+  size: ButtonSize;
+  variant: ButtonVariant;
   fullWidth?: boolean;
-  children: React.ReactNode;
-  leftIcon?: React.ReactNode;
-  rightIcon?: React.ReactNode;
-  disabled?: boolean;
-  variant?: ButtonVariant;
-  size?: ButtonSize;
-  onClick?: () => void;
+  borderRadius?: ButtonRadius;
+  shadow?: boolean;
+  isActive?: boolean;
 };
 
 export type InputType = 'text' | 'password' | 'number' | 'email' | 'tel';
 
-export type InputProps = {
-  id: string;
+export type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   label?: string;
-  type: InputType;
-  required: boolean;
-  register?: UseFormRegister<FieldValues>;
-  errors?: boolean;
   // errors?: FieldErrors<FieldValues>;
-  disable: boolean;
-  icon?: React.ReactNode;
-  showIcon?: React.ReactNode;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  errors?: boolean;
+  icon?: keyof typeof ICONS;
+  showIcon?: keyof typeof ICONS;
 };
