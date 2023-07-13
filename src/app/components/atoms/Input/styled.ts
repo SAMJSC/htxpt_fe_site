@@ -2,6 +2,10 @@ import styled, { css, keyframes } from 'styled-components';
 
 import { InputProps } from '@/app/types/common';
 
+interface Prop extends Omit<InputProps, 'hasValue'> {
+  hasValue: boolean;
+}
+
 const labelMoveUpAnimation = keyframes`
   from {
     top: 50%;
@@ -30,6 +34,7 @@ const labelMoveDownAnimation = keyframes`
 export const Container = styled.div`
   position: relative;
   width: 50%;
+  overflow: hidden;
 `;
 
 export const InputContainer = styled.div`
@@ -47,7 +52,19 @@ export const IconContainer = styled.div`
   height: 24px;
 `;
 
-export const InputField = styled.input<Partial<InputProps> & { hasValue: boolean }>`
+export const InputLabel = styled.label<Pick<InputProps, 'errors'>>`
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: ${({ theme, errors }) => (errors ? theme.colors.error : theme.colors.darkGrey)};
+  ${({ theme }) => theme.fonts.subTitleRegular};
+  transition: top 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  background: ${({ theme }) => theme.colors.white};
+`;
+
+export const InputField = styled.input<Prop>`
   &::-ms-reveal {
     display: none;
   }
@@ -60,11 +77,12 @@ export const InputField = styled.input<Partial<InputProps> & { hasValue: boolean
   ${({ theme }) => theme.fonts.title3Regular};
   transition: padding 0.3s ease, border-color 0.3s ease;
   padding: 18px 16px;
+  text-overflow: ellipsis;
   &:focus {
     outline: none;
     padding: 24px 16px 12px;
     background: ${({ theme }) => theme.colors.white};
-    ~ label {
+    ~ ${InputLabel} {
       animation: ${labelMoveUpAnimation} 0.3s ease forwards;
     }
   }
@@ -72,27 +90,17 @@ export const InputField = styled.input<Partial<InputProps> & { hasValue: boolean
     hasValue
       ? css`
           padding: 24px 16px 12px;
-          ~ label {
+          ~ ${InputLabel} {
             animation: ${labelMoveUpAnimation} 0.3s ease forwards;
           }
         `
       : css`
           &:not(:focus) {
-            ~ label {
+            ~ ${InputLabel} {
               animation: ${labelMoveDownAnimation} 0.3s ease forwards;
             }
           }
         `}
-`;
-
-export const InputLabel = styled.label<Pick<InputProps, 'errors'>>`
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: ${({ theme, errors }) => (errors ? theme.colors.error : theme.colors.darkGrey)};
-  ${({ theme }) => theme.fonts.subTitleRegular};
-  transition: top 0.3s ease, transform 0.3s ease;
 `;
 
 export const ErrorMessage = styled.div`

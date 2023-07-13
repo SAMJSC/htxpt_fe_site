@@ -1,25 +1,26 @@
 import Button from '@/app/components/atoms/Button';
-import Icon from '@/app/components/atoms/Icon';
 import Input from '@/app/components/atoms/Input';
-import { theme } from '@/app/components/modules/ThemeProvider/theme';
+import { About } from '~/public/images';
 
 const Header = () => {
   return (
     <div>
       Header
-      <Button size="md" variant="contained">
-        Button
-      </Button>
-      <Input
-        disable={false}
-        id="test"
-        required={false}
-        type="text"
-        errors={false}
-        label="User name"
-        showIcon={<Icon name="ic_eye_outline" color={theme.colors.darkGrey} size={24} />}
-        icon={<Icon name="ic_eye_off_outline" color={theme.colors.darkGrey} size={24} />}
-      />
+      <div style={{ margin: '10px' }}>
+        <Button size="lg" borderRadius="normal" variant="image" isActive image={About.src} shadow>
+          {/* TODO: Check hover */}
+          Children
+        </Button>
+      </div>
+      <div style={{ margin: '10px' }}>
+        <Input
+          id="test"
+          type="text"
+          label="User name"
+          showIcon="ic_eye_outline"
+          icon="ic_eye_off_outline"
+        />
+      </div>
     </div>
   );
 };
