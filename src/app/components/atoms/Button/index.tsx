@@ -8,9 +8,9 @@ import {
 } from '@/app/components/atoms/Button/styled';
 import Icon from '@/app/components/atoms/Icon';
 import { theme } from '@/app/components/modules/ThemeProvider/theme';
-import { ButtonProps } from '@/app/types/common';
+import { TButton } from '@/app/types/common';
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
+const Button = (props: TButton): React.ReactElement => {
   const {
     icon,
     image,
@@ -21,6 +21,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => 
     shadow,
     isActive,
     borderRadius,
+    onClick,
     ...otherProps
   } = props;
 
@@ -32,19 +33,21 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => 
       borderRadius={borderRadius}
       fullWidth={fullWidth}
       shadow={shadow}
-      ref={ref}
       isActive={isActive}
+      onClick={onClick}
     >
       {image && (
         <ImageContainer isActive={isActive} src={image} alt={image} width={43} height={43} />
       )}
       {icon && (
-        <IconContainer size={size}>{<Icon name={icon} color={theme.colors.black} />}</IconContainer>
+        <IconContainer size={size}>
+          {<Icon size={Number(size)} name={icon} color={theme.colors.black} />}
+        </IconContainer>
       )}
       <ContentContainer>{children}</ContentContainer>
     </Container>
   );
-});
+};
 
 Button.displayName = 'Button';
 

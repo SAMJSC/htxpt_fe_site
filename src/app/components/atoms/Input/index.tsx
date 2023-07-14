@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 import Icon from '@/app/components/atoms/Icon';
 import {
   Container,
@@ -10,39 +8,27 @@ import {
   InputLabel,
 } from '@/app/components/atoms/Input/styled';
 import { theme } from '@/app/components/modules/ThemeProvider/theme';
-import { InputProps } from '@/app/types/common';
+import { TInput } from '@/app/types/common';
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>((props, ref) => {
-  const [value, setValue] = useState('');
-  const [isShowPassword, setIsShowPassword] = useState(false);
-  const { id, label, type, errors, icon, showIcon } = props;
-
-  const handleOnType = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
-  };
-
-  const handleIconClicked = () => {
-    if (showIcon) {
-      setIsShowPassword(!isShowPassword);
-    }
-  };
+const Input = (props: TInput) => {
+  const { id, label, type, errors, icon, showIcon, onChange, isShowPassword, value, onIconClick } =
+    props;
 
   return (
     <Container>
       <InputContainer>
         <InputField
           type={showIcon ? (isShowPassword ? type : 'password') : type}
-          onChange={handleOnType}
-          hasValue={value.length > 0}
+          onChange={onChange}
+          value={value}
           errors={errors}
           icon={icon}
           autoCapitalize="off"
           spellCheck={false}
           autoComplete="off"
-          ref={ref}
           id={id}
         />
-        <IconContainer onClick={handleIconClicked}>
+        <IconContainer onClick={onIconClick}>
           {showIcon && !isShowPassword ? (
             <Icon
               name={showIcon}
@@ -72,7 +58,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((props, ref) => {
       )}
     </Container>
   );
-});
+};
 
 Input.displayName = 'Input';
 

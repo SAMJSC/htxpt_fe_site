@@ -8,7 +8,7 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from '@/app/components/modules/ThemeProvider/theme';
 import { store } from '@/app/store';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], weight: ['400', '600', '700'] });
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (

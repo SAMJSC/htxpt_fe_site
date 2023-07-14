@@ -1,10 +1,6 @@
 import styled, { css, keyframes } from 'styled-components';
 
-import { InputProps } from '@/app/types/common';
-
-interface Prop extends Omit<InputProps, 'hasValue'> {
-  hasValue: boolean;
-}
+import { TInput } from '@/app/types/common';
 
 const labelMoveUpAnimation = keyframes`
   from {
@@ -52,7 +48,7 @@ export const IconContainer = styled.div`
   height: 24px;
 `;
 
-export const InputLabel = styled.label<Pick<InputProps, 'errors'>>`
+export const InputLabel = styled.label<Pick<TInput, 'errors'>>`
   position: absolute;
   left: 16px;
   top: 50%;
@@ -64,7 +60,7 @@ export const InputLabel = styled.label<Pick<InputProps, 'errors'>>`
   background: ${({ theme }) => theme.colors.white};
 `;
 
-export const InputField = styled.input<Prop>`
+export const InputField = styled.input<TInput>`
   &::-ms-reveal {
     display: none;
   }
@@ -86,8 +82,8 @@ export const InputField = styled.input<Prop>`
       animation: ${labelMoveUpAnimation} 0.3s ease forwards;
     }
   }
-  ${({ hasValue }) =>
-    hasValue
+  ${({ value }) =>
+    value && value?.length > 0
       ? css`
           padding: 24px 16px 12px;
           ~ ${InputLabel} {
