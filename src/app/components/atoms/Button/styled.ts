@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-import { ButtonProps } from '@/app/types/common';
+import { TButton } from '@/app/types/common';
 
-export const Container = styled.button<ButtonProps>`
+export const Container = styled.button<TButton>`
   ${({ size, shadow }) =>
     size === 'sm'
       ? css`
@@ -105,11 +105,11 @@ export const Container = styled.button<ButtonProps>`
   cursor: pointer;
 `;
 
-export const IconContainer = styled.div<Pick<ButtonProps, 'size'>>`
+export const IconContainer = styled.div<Pick<TButton, 'size'>>`
   height: 24px;
 `;
 
-export const ImageContainer = styled.img<Pick<ButtonProps, 'isActive'>>`
+export const ImageContainer = styled.img<Pick<TButton, 'isActive'>>`
   ${({ isActive }) =>
     isActive
       ? css`

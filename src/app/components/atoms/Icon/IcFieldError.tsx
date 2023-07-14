@@ -1,8 +1,8 @@
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 
-import { IconProps } from '@/app/components/atoms/Icon';
+import { TIcon } from '@/app/types/common';
 
-const IcFieldError = ({ size }: IconProps): ReactElement => {
+const IcFieldError = ({ size }: TIcon): ReactElement => {
   return (
     <svg
       width={size}

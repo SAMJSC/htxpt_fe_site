@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { IconProps } from '@/app/components/atoms/Icon';
+import { TIcon } from '@/app/types/common';
 
-const IcGroupOutline = ({ size = 24, color }: IconProps): React.ReactElement => {
+const IcGroupOutline = ({ size = 24, color }: TIcon): React.ReactElement => {
   return (
     <svg
       width={size}

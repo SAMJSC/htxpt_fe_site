@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
 
-import { IconProps } from '@/app/components/atoms/Icon';
+import { TIcon } from '@/app/types/common';
 
-const IcEyeOffOutline = ({ size = 120, color }: IconProps): ReactElement => {
+const IcEyeOffOutline = ({ size = 120, color }: TIcon): ReactElement => {
   return (
     <svg
       width={size}

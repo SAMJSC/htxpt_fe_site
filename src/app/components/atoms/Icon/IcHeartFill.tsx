@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { IconProps } from '@/app/components/atoms/Icon';
+import { TIcon } from '@/app/types/common';
 
-const IcHeartFill = ({ size = 24 }: IconProps): React.ReactElement => {
+const IcHeartFill = ({ size = 24 }: TIcon): React.ReactElement => {
   return (
     <svg
       width={size}
