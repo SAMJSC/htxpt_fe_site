@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { PropsWithChildren } from "react";
+import { PropsWithChildren } from 'react';
 
-import Header from "@/app/components/modules/Header";
+import Header from '@/app/components/modules/Header';
 
-import { ChildrenWrapper, Container } from "./styled";
+import { ChildrenWrapper, Container } from './styled';
 
 type Props = {
   withHeader?: boolean;
