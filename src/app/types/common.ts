@@ -62,7 +62,7 @@ export type TCheckBox = React.InputHTMLAttributes<HTMLInputElement> & {
 
 export type TIcon = {
   name: keyof typeof ICONS;
-  size: number;
+  size?: number;
   color?: string;
 };
 
