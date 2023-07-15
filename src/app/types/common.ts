@@ -73,3 +73,9 @@ export type TCheckbox = InputHTMLAttributes<HTMLInputElement> & {
   checked?: boolean;
   onClick?: React.MouseEventHandler<HTMLElement>;
 };
+
+export type Action = {
+  id: string;
+  label: string;
+  handler: () => void;
+};
