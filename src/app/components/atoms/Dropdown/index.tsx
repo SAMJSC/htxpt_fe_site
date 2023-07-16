@@ -15,8 +15,12 @@ type DropdownProps = {
   onClick: React.MouseEventHandler<HTMLDivElement>;
 };
 
-const Dropdown = (props: DropdownProps): React.ReactElement => {
-  const { children, listActions, onClick, isShowOptions } = props;
+const Dropdown = ({
+  children,
+  listActions,
+  onClick,
+  isShowOptions,
+}: DropdownProps): React.ReactElement => {
   const [isAnimatingOut, setIsAnimatingOut] = React.useState(false);
 
   React.useEffect(() => {
