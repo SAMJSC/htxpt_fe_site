@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Icon from '@/app/components/atoms/Icon';
 import {
   Container,
@@ -10,10 +12,18 @@ import {
 import { theme } from '@/app/components/modules/ThemeProvider/theme';
 import { TInput } from '@/app/types/common';
 
-const Input = (props: TInput) => {
-  const { id, label, type, errors, icon, showIcon, onChange, isShowPassword, value, onIconClick } =
-    props;
-
+const Input = ({
+  id,
+  label,
+  type,
+  errors,
+  icon,
+  showIcon,
+  onChange,
+  isShowPassword,
+  value,
+  onIconClick,
+}: TInput): React.ReactElement => {
   return (
     <Container>
       <InputContainer>

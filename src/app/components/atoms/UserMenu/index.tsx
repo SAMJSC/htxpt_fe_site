@@ -5,7 +5,7 @@ import Icon from '@/app/components/atoms/Icon';
 import { AvatarContainer, Container } from '@/app/components/atoms/UserMenu/styled';
 import { Nature } from '~/public/images';
 
-const UserMenu = () => {
+const UserMenu = (): React.ReactElement => {
   return (
     <Container>
       <Icon name="ic_menu_outline" size={16} />

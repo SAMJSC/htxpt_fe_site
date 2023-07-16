@@ -27,17 +27,16 @@ type GardenerProps = {
   isLiked?: boolean;
 };
 
-const GardenerCard = (props: GardenerProps): React.ReactElement => {
-  const {
-    gardenerName,
-    image,
-    isLiked,
-    onHeartIconClick,
-    location,
-    phoneNumber,
-    products,
-    ratingStart,
-  } = props;
+const GardenerCard = ({
+  gardenerName,
+  image,
+  isLiked,
+  onHeartIconClick,
+  location,
+  phoneNumber,
+  products,
+  ratingStart,
+}: GardenerProps): React.ReactElement => {
   return (
     <Container>
       <ImageContainer image={image}>
