@@ -79,3 +79,7 @@ export type Action = {
   label: string;
   handler: () => void;
 };
+
+export const GARDENER_TEXT = 'Nhà vườn';
+
+export const STATUS_TEXT = 'Tình trạng';
