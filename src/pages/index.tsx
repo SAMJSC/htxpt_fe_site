@@ -1,10 +1,14 @@
 import { NextPage } from 'next';
-import React from 'react';
+import React, { useCallback } from 'react';
 
-import Page from '@/app/components/modules/Page';
+import DefaultLayout from '@/app/components/layouts/DefaultLayout';
+import HomeContent from '@/app/components/modules/HomeContent';
 
 const IndexPage: NextPage = (): React.ReactElement => {
-  return <Page />;
+  const renderContent = useCallback(() => {
+    return <HomeContent />;
+  }, []);
+  return <DefaultLayout>{renderContent()}</DefaultLayout>;
 };
 
 export default IndexPage;
