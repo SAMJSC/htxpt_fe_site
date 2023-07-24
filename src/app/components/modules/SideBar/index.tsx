@@ -5,15 +5,24 @@ import Icon from '@/app/components/atoms/Icon';
 import SideBarItem from '@/app/components/atoms/SideItem';
 import {
   Container,
+  HelpCenterButton,
+  HelpCenterContainer,
+  HelpCenterContent,
+  HelpCenterTitle,
   ImageContainer,
   OptionsContainer,
 } from '@/app/components/modules/SideBar/styled';
-import { NAVBAR_ITEMS } from '@/app/constants/sidebar';
+import {
+  HELP_CENTER_BUTTON_CONTENT,
+  HELP_CENTER_CONTENT_TEXT,
+  HELP_CENTER_TITLE_TEXT,
+  NAVBAR_ITEMS,
+} from '@/app/constants/sidebar';
 import { SideBarItems } from '@/app/types/sidebar';
-import { Logo } from '~/public/images';
+import { HelpCenterBackground, Logo } from '~/public/images';
 
-const SideBar = () => {
-  const [isActive, setIsActive] = useState('');
+const SideBar = (): React.ReactElement => {
+  const [isActive, setIsActive] = useState('HOME');
   const handleSideBarItemClicked = useCallback((code: string) => {
     setIsActive(code);
   }, []);
@@ -33,6 +42,11 @@ const SideBar = () => {
           />
         ))}
       </OptionsContainer>
+      <HelpCenterContainer image={HelpCenterBackground.src}>
+        <HelpCenterTitle>{HELP_CENTER_TITLE_TEXT}</HelpCenterTitle>
+        <HelpCenterContent>{HELP_CENTER_CONTENT_TEXT}</HelpCenterContent>
+        <HelpCenterButton>{HELP_CENTER_BUTTON_CONTENT}</HelpCenterButton>
+      </HelpCenterContainer>
     </Container>
   );
 };

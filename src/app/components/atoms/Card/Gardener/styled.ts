@@ -7,13 +7,14 @@ export const Container = styled.div`
   overflow: hidden;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
-  height: 311px;
+  height: 350px;
+  cursor: pointer;
 `;
 
 export const ImageContainer = styled.div<{ image: string }>`
   position: relative;
   width: 100%;
-  height: 185px;
+  height: 230px;
   background-image: url(${(props) => props.image});
   background-position: center;
   background-size: cover;
@@ -32,6 +33,11 @@ export const LikeIcon = styled.div`
   position: absolute;
   right: 10px;
   top: 10px;
+  cursor: pointer;
+  :hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
 `;
 
 export const ContentHeader = styled.div`

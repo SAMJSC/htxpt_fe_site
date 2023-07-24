@@ -12,6 +12,7 @@ export const Container = styled.div`
   align-items: center;
   padding: 16px 54px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
 `;
 
 export const SloganContainer = styled.div`
@@ -22,12 +23,15 @@ export const SloganContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
 `;
+
 export const WelcomeText = styled.div`
   ${({ theme }) => theme.fonts.title2Bold};
 `;
+
 export const SloganText = styled.div`
   ${({ theme }) => theme.fonts.captionRegular};
 `;
+
 export const HeaderRight = styled.div`
   flex: 1;
   display: flex;

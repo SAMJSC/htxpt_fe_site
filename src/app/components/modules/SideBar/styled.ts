@@ -19,3 +19,41 @@ export const ImageContainer = styled.div`
 export const OptionsContainer = styled.div`
   margin-top: 52px;
 `;
+
+export const HelpCenterContainer = styled.div<{ image: string }>`
+  background-image: ${({ image }) => `url(${image})`};
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 291px;
+  width: 100%;
+  padding: 33px 22px;
+  padding: 33px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+`;
+
+export const HelpCenterTitle = styled.div`
+  ${({ theme }) => theme.fonts.bodyBold};
+  color: ${({ theme }) => theme.colors.black};
+`;
+export const HelpCenterContent = styled.div`
+  ${({ theme }) => theme.fonts.captionRegular};
+  color: ${({ theme }) => theme.colors.darkGrey};
+`;
+
+export const HelpCenterButton = styled.div`
+  ${({ theme }) => theme.fonts.bodyBold};
+  color: ${({ theme }) => theme.colors.black};
+  background-color: ${({ theme }) => theme.colors.white};
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 12px 6px;
+  border-radius: 8px;
+  cursor: pointer;
+`;

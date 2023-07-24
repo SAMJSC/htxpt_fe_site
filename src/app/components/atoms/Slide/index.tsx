@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { SlideImage } from '@/app/components/atoms/News/styled';
-import { SlideContainer } from '@/app/components/atoms/Slide/styled';
+import { SlideContainer, SlideImage } from '@/app/components/atoms/Slide/styled';
 import { Nature } from '~/public/images';
 
-const Slide = () => {
+const Slide = (): React.ReactElement => {
   return (
     <SlideContainer>
       <SlideImage image={Nature.src} />

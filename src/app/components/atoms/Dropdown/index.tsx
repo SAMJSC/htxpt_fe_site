@@ -32,11 +32,11 @@ const Dropdown = ({
   return (
     <Container onClick={onClick}>
       <PromptContainer>{children}</PromptContainer>
-      {(isShowOptions || isAnimatingOut) && (
+      {isShowOptions && isAnimatingOut ? (
         <ListActionContainer isShowOptions={isShowOptions}>
           <ListAction listActions={listActions} />
         </ListActionContainer>
-      )}
+      ) : null}
     </Container>
   );
 };

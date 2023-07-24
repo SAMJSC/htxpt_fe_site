@@ -6,11 +6,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: fit-content;
+  height: 350px;
   border-radius: 8px;
   background-color: ${({ theme }) => theme.colors.white};
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  justify-content: center;
+
   align-items: center;
   overflow: hidden;
   cursor: pointer;
@@ -21,8 +21,8 @@ export const ImageContainer = styled.div<Pick<ProductCardProps, 'image'>>`
   background-size: cover;
   background-position: center;
   ${(props) => props.image}
-  height: 136px;
-  min-height: 136px;
+  height: 230px;
+  min-height: 230px;
   width: 100%;
 `;
 

@@ -1,11 +1,11 @@
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
-import React, { ReactNode, RefObject, useCallback, useRef, useState } from 'react';
+import { ReactNode, useCallback, useRef, useState } from 'react';
 import Slider from 'react-slick';
 
-import { Container, ScrollSnapBaseBox } from '@/app/components/modules/ScrollSnapBase/styled';
-import Indicator from '@/app/components/modules/ScrollSnapBase/Indicator';
+import Indicator from '@/app/components/atoms/ScrollSnapBase/Indicator';
+import { Container, ScrollSnapBaseBox } from '@/app/components/atoms/ScrollSnapBase/styled';
 
 export type ScrollSnapBaseItem = {
   id?: string | number;
@@ -13,19 +13,6 @@ export type ScrollSnapBaseItem = {
   content?: ReactNode;
   images?: ImageItemProps;
 };
-
-type TimeItemProps = {
-  prevTitle: string;
-  nextTitle: string;
-};
-
-type TimeBoxProps = {
-  isShowButton: boolean;
-  title?: string | number;
-  index: string | number;
-  length: number;
-  customSlider: RefObject<Slider>;
-} & TimeItemProps;
 
 type ScrollSnapBaseProps = {
   isShowButtonHeader: boolean;
@@ -45,14 +32,19 @@ const ScrollSnapBase = ({ contentSlide, initialSlice }: ScrollSnapBaseProps) => 
   const customSlider = useRef<Slider>(null);
   const [index, setIndex] = useState<number>(initialSlice || 0);
   const settings = {
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
   };
+
   const handlerBeforeChange = useCallback((_oldIndex: number, newIndex: number) => {
     setIndex(newIndex);
   }, []);
+
   return (
     <ScrollSnapBaseBox>
       <Slider
@@ -65,7 +57,7 @@ const ScrollSnapBase = ({ contentSlide, initialSlice }: ScrollSnapBaseProps) => 
           return <Container key={slide.id}>{slide.content}</Container>;
         })}
       </Slider>
-      <Indicator dataLength={contentSlide ?? []} index={index} />
+      <Indicator dataLength={contentSlide ?? []} index={index} sliderRef={customSlider} />
     </ScrollSnapBaseBox>
   );
 };

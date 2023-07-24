@@ -15,7 +15,8 @@ import {
 import Icon from '@/app/components/atoms/Icon';
 import { theme } from '@/app/components/modules/ThemeProvider/theme';
 
-type GardenerProps = {
+export type GardenerProps = {
+  id: string;
   image: string;
   gardenerName: string;
   ratingStart: number;
