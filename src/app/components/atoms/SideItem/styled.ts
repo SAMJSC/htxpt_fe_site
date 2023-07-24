@@ -6,11 +6,11 @@ export const Container = styled.div<{ isActive: boolean }>`
   position: relative;
   color: ${(props) => (props.isActive ? theme.colors.primaryButton : theme.colors.darkGrey)};
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 8px 24px;
   gap: 24px;
-  width: fit-content;
+  width: 100%;
   cursor: pointer;
 
   &::after {

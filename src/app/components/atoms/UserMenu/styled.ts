@@ -9,8 +9,8 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
   padding: 8px 8px 8px 12px;
   border-radius: 30px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  height: 40px;
 `;
 
 export const AvatarContainer = styled.div`

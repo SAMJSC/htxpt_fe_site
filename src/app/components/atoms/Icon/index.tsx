@@ -18,6 +18,8 @@ import IcMenuOutline from '@/app/components/atoms/Icon/IcMenuOutline';
 import IcMessageOutline from '@/app/components/atoms/Icon/IcMessageOutline';
 import IcNotificationOutline from '@/app/components/atoms/Icon/IcNotificationOutline';
 import IcPhoneOutline from '@/app/components/atoms/Icon/IcPhoneOutline';
+import IcSearchFilter from '@/app/components/atoms/Icon/IcSearchFilter';
+import IcSearchOutline from '@/app/components/atoms/Icon/IcSearchOutline';
 import IcSettingOutline from '@/app/components/atoms/Icon/IcSettingOutline';
 import IcShareOutline from '@/app/components/atoms/Icon/IcShareOutline';
 import IcStart from '@/app/components/atoms/Icon/IcStart';
@@ -52,6 +54,8 @@ export const ICONS = {
   ic_phone_outline: IcPhoneOutline,
   ic_card_category_outline: IcCardCategoryOutline,
   ic_start: IcStart,
+  ic_search_filter: IcSearchFilter,
+  ic_search_outline: IcSearchOutline,
 } as const;
 
 const Icon = ({ name, size = 24, color = 'currentColor', ...props }: TIcon) => {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, IconContainer, LabelContainer } from '@/app/components/atoms/NavbarItem/styled';
+import { Container, IconContainer, LabelContainer } from '@/app/components/atoms/SideItem/styled';
 
 type NavbarItemProps = {
   icon: React.ReactElement;
@@ -9,7 +9,7 @@ type NavbarItemProps = {
   onClick: () => void;
 };
 
-const NavbarItem = ({ icon, label, isActive, onClick }: NavbarItemProps): React.ReactElement => {
+const SideBarItem = ({ icon, label, isActive, onClick }: NavbarItemProps): React.ReactElement => {
   return (
     <Container isActive={isActive} onClick={onClick}>
       <IconContainer>{icon}</IconContainer>
@@ -18,4 +18,4 @@ const NavbarItem = ({ icon, label, isActive, onClick }: NavbarItemProps): React.
   );
 };
 
-export default NavbarItem;
+export default SideBarItem;
