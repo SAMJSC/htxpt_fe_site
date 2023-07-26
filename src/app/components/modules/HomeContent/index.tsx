@@ -62,14 +62,11 @@ const HomeContent = ({
 
   const handleHeartIconClicked = useCallback(
     (id: string) => {
-      // Check if this gardener is already liked
       const isAlreadyLiked = gardenerLikes.includes(id);
 
       if (isAlreadyLiked) {
-        // If already liked, remove from the list of likes
         setGardenerLikes(gardenerLikes.filter((gardenerId) => gardenerId !== id));
       } else {
-        // If not liked yet, add to the list of likes
         setGardenerLikes([...gardenerLikes, id]);
       }
     },

@@ -1,5 +1,3 @@
-'use client';
-
 import { PropsWithChildren, ReactNode, useCallback } from 'react';
 
 import Header from '@/app/components/modules/Header';

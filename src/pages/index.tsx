@@ -4,7 +4,6 @@ import React, { useCallback } from 'react';
 import { BlogCardProp } from '@/app/components/atoms/Card/Blog';
 import { GardenerProps } from '@/app/components/atoms/Card/Gardener';
 import { ProductCardProps } from '@/app/components/atoms/Card/Product';
-import DefaultLayout from '@/app/components/layouts/DefaultLayout';
 import HomeContent from '@/app/components/modules/HomeContent';
 import { Nature } from '~/public/images';
 
@@ -132,7 +131,7 @@ const IndexPage: NextPage = (): React.ReactElement => {
       />
     );
   }, []);
-  return <DefaultLayout>{renderContent()}</DefaultLayout>;
+  return renderContent();
 };
 
 export default IndexPage;
