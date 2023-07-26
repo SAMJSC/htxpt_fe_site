@@ -1,9 +1,15 @@
 export { default as About } from '~/public/images/about.png';
+export { default as CEOAvatar } from '~/public/images/CEOavatar.png';
 export { default as Commit } from '~/public/images/commit.png';
-export { default as HelpCenterBackground } from '~/public/images/help-center-bg.png';
+export { default as Fair } from '~/public/images/fair.png';
+export { default as HelpCenter } from '~/public/images/help-center-bg.png';
 export { default as History } from '~/public/images/history.png';
 export { default as Human_Resources } from '~/public/images/human_resources.png';
+export { default as Integrity } from '~/public/images/integrity.png';
+export { default as Legal } from '~/public/images/legal.png';
 export { default as Logo } from '~/public/images/logo.png';
+export { default as Morality } from '~/public/images/morality.png';
 export { default as Nature } from '~/public/images/nature.png';
+export { default as Respect } from '~/public/images/respect.png';
 export { default as Strategy } from '~/public/images/strategy.png';
 export { default as System } from '~/public/images/system.png';

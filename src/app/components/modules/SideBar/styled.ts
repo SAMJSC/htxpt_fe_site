@@ -18,6 +18,7 @@ export const ImageContainer = styled.div`
 
 export const OptionsContainer = styled.div`
   margin-top: 52px;
+  position: relative;
 `;
 
 export const HelpCenterContainer = styled.div<{ image: string }>`
@@ -56,4 +57,14 @@ export const HelpCenterButton = styled.div`
   padding: 12px 6px;
   border-radius: 8px;
   cursor: pointer;
+`;
+
+export const ActiveIndicator = styled.div<{ index: number }>`
+  position: absolute;
+  left: 0;
+  top: ${(props) => `${props.index * 40}px`};
+  width: 5px;
+  height: 40px;
+  background-color: ${({ theme }) => theme.colors.primaryButton};
+  transition: top 0.2s ease-in;
 `;

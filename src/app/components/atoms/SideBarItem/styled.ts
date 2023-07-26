@@ -12,8 +12,7 @@ export const Container = styled.div<{ isActive: boolean }>`
   gap: 24px;
   width: 100%;
   cursor: pointer;
-
-  &::after {
+  /* &::after {
     content: '';
     position: absolute;
     left: 0;
@@ -21,7 +20,7 @@ export const Container = styled.div<{ isActive: boolean }>`
     height: 100%;
     background-color: ${({ theme }) => theme.colors.primaryButton};
     display: ${(props) => (props.isActive ? 'block' : 'none')};
-  }
+  } */
 `;
 
 export const IconContainer = styled.div``;
