@@ -17,7 +17,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const OptionsContainer = styled.div`
-  margin-top: 52px;
+  margin: 54px 0;
   position: relative;
 `;
 

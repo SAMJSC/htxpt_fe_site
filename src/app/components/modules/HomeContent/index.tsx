@@ -65,7 +65,7 @@ const HomeContent = ({
       const isAlreadyLiked = gardenerLikes.includes(id);
 
       if (isAlreadyLiked) {
-        setGardenerLikes(gardenerLikes.filter((gardenerId) => gardenerId !== id));
+        setGardenerLikes(gardenerLikes.filter((gardenerId: string) => gardenerId !== id));
       } else {
         setGardenerLikes([...gardenerLikes, id]);
       }

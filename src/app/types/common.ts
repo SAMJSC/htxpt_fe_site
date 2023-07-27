@@ -83,3 +83,15 @@ export type Action = {
 export const GARDENER_TEXT = 'Nhà vườn';
 
 export const STATUS_TEXT = 'Tình trạng';
+
+export const GARDENER_CATEGORIES = {
+  GARDENERS: 'Nhà vườn',
+  FAVORITES: 'Yêu thích',
+} as const;
+
+export type GardenerCategoriesCode = keyof typeof GARDENER_CATEGORIES;
+
+export type GardenerButtonCategories = {
+  code: GardenerCategoriesCode;
+  label: string;
+};

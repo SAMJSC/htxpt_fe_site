@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EmptyPageContainer } from '@/app/components/modules/EmptyPage/styled';
+import { EmptyPageContainer } from '@/app/components/modules/PageContent/EmptyPage/styled';
 import { EMPTY_PAGE_TEXT } from '@/app/constants/common';
 
 const EmptyPage = (): React.ReactElement => {

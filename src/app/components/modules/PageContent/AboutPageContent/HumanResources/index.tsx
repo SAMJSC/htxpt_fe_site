@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { HumanResourcesPageContentContainer } from '@/app/components/modules/AboutPageContent/HumanResources/styled';
-import EmptyPage from '@/app/components/modules/EmptyPage';
+import { HumanResourcesPageContentContainer } from '@/app/components/modules/PageContent/AboutPageContent/HumanResources/styled';
+import EmptyPage from '@/app/components/modules/PageContent/EmptyPage';
 
 const HumanResourcesPageContent = (): React.ReactElement => {
   return (

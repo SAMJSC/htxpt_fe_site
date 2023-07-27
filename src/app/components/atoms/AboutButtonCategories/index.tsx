@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router';
 import React, { useCallback } from 'react';
 
+import { AboutButtonCategoriesContainer } from '@/app/components/atoms/AboutButtonCategories/styled';
 import Button from '@/app/components/atoms/Button';
-import { AboutButtonCategoriesContainer } from '@/app/components/modules/AboutButtonCategories/styled';
 import { ABOUT_BUTTON_CONTENT } from '@/app/constants/about';
 
 const AboutButtonCategories = (): React.ReactElement => {
