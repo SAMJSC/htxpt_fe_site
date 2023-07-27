@@ -1,4 +1,5 @@
 import { ABOUT_CATEGORIES_CODE, AboutCategories, CoreValueContentItem } from '@/app/types/about';
+import { GARDENER_CATEGORIES, GardenerButtonCategories } from '@/app/types/common';
 import {
   About,
   Commit,
@@ -93,5 +94,16 @@ export const CoreValueItem: CoreValueContentItem[] = [
     image: Legal.src,
     title: 'TUÂN THỦ',
     content: 'Tuân thủ Luật pháp, Bộ Quy Tắc Ứng Xử và các quy chế, chính sách, quy định của HTX.',
+  },
+];
+
+export const GardenerButtons: GardenerButtonCategories[] = [
+  {
+    code: 'GARDENERS',
+    label: GARDENER_CATEGORIES['GARDENERS'],
+  },
+  {
+    code: 'FAVORITES',
+    label: GARDENER_CATEGORIES['FAVORITES'],
   },
 ];

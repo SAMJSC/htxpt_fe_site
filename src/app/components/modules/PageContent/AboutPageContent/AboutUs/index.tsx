@@ -27,7 +27,7 @@ import {
   TopContentContainer,
   VisionContent,
   VisionContentContainer,
-} from '@/app/components/modules/AboutPageContent/AboutUs/styled';
+} from '@/app/components/modules/PageContent/AboutPageContent/AboutUs/styled';
 import {
   CEO_NAME,
   CORE_VALUE_CONTENT_TEXT,

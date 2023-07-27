@@ -22,15 +22,11 @@ type AppPropsWithLayout = AppProps & {
 };
 
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  // const getLayout = Component.getLayout ?? ((page) => page);
   const getLayout = Component.getLayout ?? ((page) => <DefaultLayout>{page}</DefaultLayout>);
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        <main className={inter.className}>
-          {/* <DefaultLayout>{getLayout(<Component {...pageProps} />)}</DefaultLayout> */}
-          {getLayout(<Component {...pageProps} />)}
-        </main>
+        <main className={inter.className}>{getLayout(<Component {...pageProps} />)}</main>
       </ThemeProvider>
     </Provider>
   );

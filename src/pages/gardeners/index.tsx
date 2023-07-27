@@ -1,18 +1,18 @@
-import { useCallback } from 'react';
+import React, { useCallback } from 'react';
 
 import AboutPageLayout from '@/app/components/layouts/AboutPageLayout';
 import DefaultLayout from '@/app/components/layouts/DefaultLayout';
-import SystemPageContent from '@/app/components/modules/PageContent/AboutPageContent/System';
+import GardenersPageContent from '@/app/components/modules/PageContent/GardenersPageContent';
 import { NextPageWithLayout } from '@/pages/_app';
 
-const System: NextPageWithLayout = (): React.ReactElement => {
+const Gardeners: NextPageWithLayout = (): React.ReactElement => {
   const renderContent = useCallback(() => {
-    return <SystemPageContent />;
+    return <GardenersPageContent />;
   }, []);
   return renderContent();
 };
 
-System.getLayout = function getLayout(page: React.ReactElement) {
+Gardeners.getLayout = function getLayout(page: React.ReactElement) {
   return (
     <DefaultLayout>
       <AboutPageLayout>{page}</AboutPageLayout>
@@ -20,4 +20,4 @@ System.getLayout = function getLayout(page: React.ReactElement) {
   );
 };
 
-export default System;
+export default Gardeners;

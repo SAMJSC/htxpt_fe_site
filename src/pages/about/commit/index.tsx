@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 
 import AboutPageLayout from '@/app/components/layouts/AboutPageLayout';
 import DefaultLayout from '@/app/components/layouts/DefaultLayout';
-import CommitPageContent from '@/app/components/modules/AboutPageContent/Commit';
+import CommitPageContent from '@/app/components/modules/PageContent/AboutPageContent/Commit';
 import { NextPageWithLayout } from '@/pages/_app';
 
 const Commit: NextPageWithLayout = (): React.ReactElement => {

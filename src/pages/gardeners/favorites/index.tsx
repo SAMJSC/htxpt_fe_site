@@ -1,18 +1,19 @@
-import { useCallback } from 'react';
+import React, { useCallback } from 'react';
 
 import AboutPageLayout from '@/app/components/layouts/AboutPageLayout';
 import DefaultLayout from '@/app/components/layouts/DefaultLayout';
-import SystemPageContent from '@/app/components/modules/PageContent/AboutPageContent/System';
+import FavoriteGardenersPageContent from '@/app/components/modules/PageContent/FavoriteGardenersPageContent';
 import { NextPageWithLayout } from '@/pages/_app';
 
-const System: NextPageWithLayout = (): React.ReactElement => {
+const FavoritesGardener: NextPageWithLayout = (): React.ReactElement => {
   const renderContent = useCallback(() => {
-    return <SystemPageContent />;
+    return <FavoriteGardenersPageContent />;
   }, []);
+
   return renderContent();
 };
 
-System.getLayout = function getLayout(page: React.ReactElement) {
+FavoritesGardener.getLayout = function getLayout(page: React.ReactElement) {
   return (
     <DefaultLayout>
       <AboutPageLayout>{page}</AboutPageLayout>
@@ -20,4 +21,4 @@ System.getLayout = function getLayout(page: React.ReactElement) {
   );
 };
 
-export default System;
+export default FavoritesGardener;

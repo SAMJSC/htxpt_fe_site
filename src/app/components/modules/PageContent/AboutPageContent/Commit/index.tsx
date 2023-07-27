@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { CommitPageContentContainer } from '@/app/components/modules/AboutPageContent/Commit/styled';
-import EmptyPage from '@/app/components/modules/EmptyPage';
+import { CommitPageContentContainer } from '@/app/components/modules/PageContent/AboutPageContent/Commit/styled';
+import EmptyPage from '@/app/components/modules/PageContent/EmptyPage';
 
 const CommitPageContent = (): React.ReactElement => {
   return (

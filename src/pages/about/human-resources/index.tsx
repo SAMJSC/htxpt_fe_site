@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 
 import AboutPageLayout from '@/app/components/layouts/AboutPageLayout';
 import DefaultLayout from '@/app/components/layouts/DefaultLayout';
-import HumanResourcesPageContent from '@/app/components/modules/AboutPageContent/HumanResources';
+import HumanResourcesPageContent from '@/app/components/modules/PageContent/AboutPageContent/HumanResources';
 import { NextPageWithLayout } from '@/pages/_app';
 
 const HumanResource: NextPageWithLayout = (): React.ReactElement => {
