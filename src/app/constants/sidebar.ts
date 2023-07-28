@@ -12,9 +12,9 @@ export const NAVBAR_ITEMS: SideBarItems[] = [
     name: SIDEBAR_ITEM['ABOUT'],
   },
   {
-    code: 'FRUITS',
+    code: 'FRUIT-INFORMATION',
     icon: 'ic_cube_outline',
-    name: SIDEBAR_ITEM['FRUITS'],
+    name: SIDEBAR_ITEM['FRUIT-INFORMATION'],
   },
   {
     code: 'GARDENERS',

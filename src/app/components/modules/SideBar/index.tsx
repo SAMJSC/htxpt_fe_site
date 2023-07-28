@@ -66,6 +66,8 @@ const SideBarComponent = () => {
                   ? '/about/us'
                   : item.code === 'HOME'
                   ? '/'
+                  : item.code === 'PRODUCTS'
+                  ? '/products/fruits'
                   : `/${item.code.toLowerCase()}`
               }
               legacyBehavior

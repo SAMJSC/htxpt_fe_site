@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const GardenerButtonCategoriesContainer = styled.div`
+export const ProductsTypeButtonsContainer = styled.div`
   display: flex;
   gap: 5px;
   > * {

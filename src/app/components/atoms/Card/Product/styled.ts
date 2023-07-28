@@ -6,11 +6,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 350px;
+  height: auto;
   border-radius: 8px;
   background-color: ${({ theme }) => theme.colors.white};
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
   align-items: center;
   overflow: hidden;
   cursor: pointer;
@@ -20,16 +19,24 @@ export const ImageContainer = styled.div<Pick<ProductCardProps, 'image'>>`
   background-image: ${({ image }) => `url(${image})`};
   background-size: cover;
   background-position: center;
-  ${(props) => props.image}
-  height: 230px;
-  min-height: 230px;
+  height: 15vw;
   width: 100%;
+
+  @media (max-width: 1400px) {
+    height: 20vw;
+  }
+  @media (max-width: 1024px) {
+    height: 25vw;
+  }
+
+  @media (max-width: 768px) {
+    height: 25vw;
+  }
 `;
 
 export const ContentContainer = styled.div`
   width: 100%;
-  height: 127px;
-  min-height: 127px;
+  height: auto;
   padding: 10px 12px;
   display: flex;
   flex-direction: column;

@@ -3,6 +3,7 @@ import React, { PropsWithChildren, useCallback } from 'react';
 
 import AboutButtonCategories from '@/app/components/atoms/AboutButtonCategories';
 import GardenerButtonCategories from '@/app/components/atoms/GardenersButtonCategories';
+import ProductsTypeButtons from '@/app/components/atoms/ProductsTypeButtons';
 import {
   AboutButtonOptions,
   AboutPageLayoutContainer,
@@ -29,10 +30,19 @@ const AboutPageLayout = ({
     return <GardenerButtonCategories />;
   }, [headerNode]);
 
+  const renderProductsListHeader = useCallback(() => {
+    if (headerNode) return headerNode;
+    return <ProductsTypeButtons />;
+  }, [headerNode]);
+
   return (
     <AboutPageLayoutContainer>
       <AboutButtonOptions>
-        {route.pathname.includes('about') ? renderAboutHeader() : renderGardenerListHeader()}
+        {route.pathname.includes('about')
+          ? renderAboutHeader()
+          : route.pathname.includes('products')
+          ? renderProductsListHeader()
+          : renderGardenerListHeader()}
       </AboutButtonOptions>
       <BodyPage>{children}</BodyPage>
     </AboutPageLayoutContainer>
