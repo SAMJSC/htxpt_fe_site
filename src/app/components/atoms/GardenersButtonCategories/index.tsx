@@ -3,7 +3,7 @@ import React, { useCallback } from 'react';
 
 import Button from '@/app/components/atoms/Button';
 import { GardenerButtonCategoriesContainer } from '@/app/components/atoms/GardenersButtonCategories/styled';
-import { GardenerButtons } from '@/app/constants/about';
+import { GardenerButtons } from '@/app/constants/common';
 import { GardenerButtonCategories } from '@/app/types/common';
 
 const GardenerButtonCategories = (): React.ReactElement => {

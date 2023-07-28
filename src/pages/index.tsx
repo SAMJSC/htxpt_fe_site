@@ -2,37 +2,9 @@ import { NextPage } from 'next';
 import React, { useCallback } from 'react';
 
 import { BlogCardProp } from '@/app/components/atoms/Card/Blog';
-import { ProductCardProps } from '@/app/components/atoms/Card/Product';
 import HomeContent from '@/app/components/modules/HomeContent';
-import { gardenersList } from '@/app/constants/common';
+import { gardenersList, productsList } from '@/app/constants/common';
 import { Nature } from '~/public/images';
-
-const productsList: ProductCardProps[] = [
-  {
-    image: Nature.src,
-    title: 'Beautiful Roses',
-    gardener: 'John Doe',
-    status: 'AVAILABLE',
-  },
-  {
-    image: Nature.src,
-    title: 'Tulips Bouquet',
-    gardener: 'Jane Smith',
-    status: 'OUT_OF_STOCK',
-  },
-  {
-    image: Nature.src,
-    title: 'Daisies Bundle',
-    gardener: 'Alice Johnson',
-    status: 'COMING_SOON',
-  },
-  {
-    image: Nature.src,
-    title: 'Orchids Collection',
-    gardener: 'Robert Brown',
-    status: 'AVAILABLE',
-  },
-];
 
 const blogPosts: BlogCardProp[] = [
   {

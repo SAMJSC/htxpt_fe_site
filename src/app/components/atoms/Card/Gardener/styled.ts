@@ -7,18 +7,30 @@ export const Container = styled.div`
   overflow: hidden;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
-  height: 350px;
+  height: auto;
   cursor: pointer;
 `;
 
 export const ImageContainer = styled.div<{ image: string }>`
   position: relative;
   width: 100%;
-  height: 230px;
+  height: 50vh;
   background-image: url(${(props) => props.image});
   background-position: center;
   background-size: cover;
-  aspect-ratio: auto;
+  height: 15vw;
+  width: 100%;
+
+  @media (max-width: 1400px) {
+    height: 20vw;
+  }
+  @media (max-width: 1024px) {
+    height: 25vw;
+  }
+
+  @media (max-width: 768px) {
+    height: 25vw;
+  }
 `;
 
 export const ContentContainer = styled.div`
@@ -27,6 +39,7 @@ export const ContentContainer = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  height: auto;
 `;
 
 export const LikeIcon = styled.div`
@@ -66,10 +79,22 @@ export const ContentBody = styled.div`
   margin-top: 10px;
 `;
 
+// export const BodyItemContent = styled.div`
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+// `;
+
 export const BodyItemContent = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  max-width: 90%; // Prevent long texts from overflowing
+
+  @media (min-width: 768px) {
+    // when screen is larger, allow more width
+    max-width: 95%;
+  }
 `;
 
 export const BodyItem = styled.div`

@@ -1,7 +1,9 @@
 export { default as About } from '~/public/images/about.png';
 export { default as CEOAvatar } from '~/public/images/CEOavatar.png';
 export { default as Commit } from '~/public/images/commit.png';
+export { default as DemoFruit } from '~/public/images/demo-fruit.png';
 export { default as Fair } from '~/public/images/fair.png';
+export { default as FruitInfoBg } from '~/public/images/fruit-info-bg.png';
 export { default as HelpCenter } from '~/public/images/help-center-bg.png';
 export { default as History } from '~/public/images/history.png';
 export { default as Human_Resources } from '~/public/images/human_resources.png';

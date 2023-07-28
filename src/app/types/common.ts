@@ -95,3 +95,32 @@ export type GardenerButtonCategories = {
   code: GardenerCategoriesCode;
   label: string;
 };
+
+export const PRODUCT_TYPE = {
+  FRUITS: 'Quả',
+  TREES: 'Cây',
+} as const;
+
+export type ProductTypeCode = keyof typeof PRODUCT_TYPE;
+
+export type ProductsTypeButton = {
+  code: ProductTypeCode;
+  label: string;
+};
+
+export const FRUITS_TYPE = {
+  'TYPE-1': 'Loại 1',
+  'TYPE-2': 'Loại 2',
+  'TYPE-3': 'Loại 3',
+  'TYPE-4': 'Loại 4',
+  'TYPE-5': 'Loại 5',
+  'TYPE-6': 'Loại 6',
+  SPECIAL: 'Loại đặc biệt',
+} as const;
+
+export type FruitTypesCode = keyof typeof FRUITS_TYPE;
+
+export type FruitsCheckBoxType = {
+  code: FruitTypesCode;
+  label: string;
+};

@@ -1,5 +1,4 @@
-import { ABOUT_CATEGORIES_CODE, AboutCategories, CoreValueContentItem } from '@/app/types/about';
-import { GARDENER_CATEGORIES, GardenerButtonCategories } from '@/app/types/common';
+import * as about from '@/app/types/about';
 import {
   About,
   Commit,
@@ -14,36 +13,36 @@ import {
   System,
 } from '~/public/images';
 
-export const ABOUT_BUTTON_CONTENT: AboutCategories[] = [
+export const ABOUT_BUTTON_CONTENT: about.AboutCategories[] = [
   {
     code: 'US',
     image: About.src,
-    label: ABOUT_CATEGORIES_CODE['US'],
+    label: about.ABOUT_CATEGORIES_CODE['US'],
   },
   {
     code: 'HISTORY',
     image: History.src,
-    label: ABOUT_CATEGORIES_CODE['HISTORY'],
+    label: about.ABOUT_CATEGORIES_CODE['HISTORY'],
   },
   {
     code: 'STRATEGY',
     image: Strategy.src,
-    label: ABOUT_CATEGORIES_CODE['STRATEGY'],
+    label: about.ABOUT_CATEGORIES_CODE['STRATEGY'],
   },
   {
     code: 'SYSTEM',
     image: System.src,
-    label: ABOUT_CATEGORIES_CODE['SYSTEM'],
+    label: about.ABOUT_CATEGORIES_CODE['SYSTEM'],
   },
   {
     code: 'HUMAN-RESOURCES',
     image: Human_Resources.src,
-    label: ABOUT_CATEGORIES_CODE['HUMAN-RESOURCES'],
+    label: about.ABOUT_CATEGORIES_CODE['HUMAN-RESOURCES'],
   },
   {
     code: 'COMMIT',
     image: Commit.src,
-    label: ABOUT_CATEGORIES_CODE['COMMIT'],
+    label: about.ABOUT_CATEGORIES_CODE['COMMIT'],
   },
 ];
 
@@ -68,7 +67,7 @@ export const ROLE_NAME = 'Chủ tịch HTX';
 
 export const GENDER = 'Ông';
 
-export const CoreValueItem: CoreValueContentItem[] = [
+export const CoreValueItem: about.CoreValueContentItem[] = [
   {
     image: Integrity.src,
     title: 'CHÍNH TRỰC',
@@ -94,16 +93,5 @@ export const CoreValueItem: CoreValueContentItem[] = [
     image: Legal.src,
     title: 'TUÂN THỦ',
     content: 'Tuân thủ Luật pháp, Bộ Quy Tắc Ứng Xử và các quy chế, chính sách, quy định của HTX.',
-  },
-];
-
-export const GardenerButtons: GardenerButtonCategories[] = [
-  {
-    code: 'GARDENERS',
-    label: GARDENER_CATEGORIES['GARDENERS'],
-  },
-  {
-    code: 'FAVORITES',
-    label: GARDENER_CATEGORIES['FAVORITES'],
   },
 ];

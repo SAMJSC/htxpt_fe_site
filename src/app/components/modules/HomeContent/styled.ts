@@ -36,22 +36,27 @@ export const GardenerTitle = styled.div`
 
 export const GardenerList = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 13px;
-  @media (min-width: 1200px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 12.5px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  @media (max-width: 1199px) and (min-width: 900px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  @media (max-width: 899px) and (min-width: 600px) {
-    grid-template-columns: 1fr 1fr;
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  @media (max-width: 599px) {
-    grid-template-columns: 1fr 1fr;
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1500px) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 `;
 
