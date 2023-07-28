@@ -6,7 +6,7 @@ export const ProductDetailInfoContainer = styled.div<{ backgroundImage: string }
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   display: flex;
   align-items: center;
   justify-content: space-between;

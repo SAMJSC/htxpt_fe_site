@@ -21,7 +21,7 @@ type ProductDetailInfoProps = {
     }
   | {
       products: 'trees';
-      height: number;
+      height: number[];
       fruitQuantity: number;
     }
 );
@@ -48,6 +48,20 @@ const ProductDetailInfo = ({
             <DescriptionBullet>Tay ngón: Có tay ngón, hình dáng đẹp</DescriptionBullet>
             <DescriptionBullet>Thời gian trưng : 1-5 tháng</DescriptionBullet>
             <DescriptionBullet>Sử dụng: Thăm biếu bạn bè, trưng tết, để thờ,…</DescriptionBullet>
+          </DescriptionContainer>
+        </ProductDetailContentContainer>
+      ) : products === 'trees' && 'height' in props ? (
+        <ProductDetailContentContainer>
+          <DescriptionTitle>Mô tả:</DescriptionTitle>
+          <DescriptionContainer>
+            <DescriptionBullet>
+              Chiều cao: Từ {props.height[0]}m đến {props.height[1]}m
+            </DescriptionBullet>
+            <DescriptionBullet>Số lượng quả: {props.fruitQuantity} quả</DescriptionBullet>
+            <DescriptionBullet>Quả tự nhiên vàng sang trọng, lá xanh thậm </DescriptionBullet>
+            <DescriptionBullet>
+              Sử dụng: Quà biếu, phong thủy, trưng bày thanh lịch sang trọng
+            </DescriptionBullet>
           </DescriptionContainer>
         </ProductDetailContentContainer>
       ) : (

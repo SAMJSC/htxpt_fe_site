@@ -2,11 +2,13 @@ import React, { useCallback } from 'react';
 
 import AboutPageLayout from '@/app/components/layouts/AboutPageLayout';
 import DefaultLayout from '@/app/components/layouts/DefaultLayout';
+import TreesPageContent from '@/app/components/modules/PageContent/TreesPageContent';
+import { productsList } from '@/app/constants/common';
 import { NextPageWithLayout } from '@/pages/_app';
 
 const ProductTreesPage: NextPageWithLayout = (): React.ReactElement => {
   const renderContent = useCallback(() => {
-    return <div>trees</div>;
+    return <TreesPageContent productList={productsList} />;
   }, []);
   return renderContent();
 };
