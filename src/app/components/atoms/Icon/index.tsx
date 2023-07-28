@@ -6,6 +6,7 @@ import IcEyeOffOutline from '@/app/components/atoms/Icon/IcEyeOffOutline';
 import IcEyeOutline from '@/app/components/atoms/Icon/IcEyeOutline';
 import IcFieldError from '@/app/components/atoms/Icon/IcFieldError';
 import IcForwardArrow from '@/app/components/atoms/Icon/IcForwardArrow';
+import IcFruitOutline from '@/app/components/atoms/Icon/IcFruitOutline';
 import IcGridOutline from '@/app/components/atoms/Icon/IcGridOutline';
 import IcBrowserOutline from '@/app/components/atoms/Icon/IcGroupOutline';
 import IcHeartFill from '@/app/components/atoms/Icon/IcHeartFill';
@@ -23,6 +24,7 @@ import IcSearchOutline from '@/app/components/atoms/Icon/IcSearchOutline';
 import IcSettingOutline from '@/app/components/atoms/Icon/IcSettingOutline';
 import IcShareOutline from '@/app/components/atoms/Icon/IcShareOutline';
 import IcStart from '@/app/components/atoms/Icon/IcStart';
+import IcTreesOutline from '@/app/components/atoms/Icon/IcTreesOutline';
 import IcUnCheckedBox from '@/app/components/atoms/Icon/IcUnCheckedBox';
 import IcUserOutline from '@/app/components/atoms/Icon/IcUserOutline';
 import { Container } from '@/app/components/atoms/Icon/styled';
@@ -56,6 +58,8 @@ export const ICONS = {
   ic_start: IcStart,
   ic_search_filter: IcSearchFilter,
   ic_search_outline: IcSearchOutline,
+  ic_fruit_outline: IcFruitOutline,
+  ic_trees_outline: IcTreesOutline,
 } as const;
 
 const Icon = ({ name, size = 24, color = 'currentColor', ...props }: TIcon) => {
