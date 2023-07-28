@@ -13,6 +13,7 @@ export const SideBarContainer = styled.div`
 
 export const BodyContainer = styled.div`
   display: flex;
+  flex-direction: column;
   width: calc(100% - 260px);
   background-color: ${({ theme }) => theme.colors.background} !important;
 `;

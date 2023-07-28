@@ -1,5 +1,6 @@
 import { PropsWithChildren, ReactNode, useCallback } from 'react';
 
+import Footer from '@/app/components/modules/Footer';
 import Header from '@/app/components/modules/Header';
 import SideBar from '@/app/components/modules/SideBar';
 
@@ -28,6 +29,7 @@ function DefaultLayout({ headerNode, sidebarNode, children }: PropsWithChildren<
       <BodyContainer>
         <HeaderContainer>{renderHeader()}</HeaderContainer>
         <BodyPage>{children}</BodyPage>
+        <Footer />
       </BodyContainer>
     </Container>
   );
