@@ -51,11 +51,11 @@ export const GardenerList = styled.div`
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  @media (min-width: 1400px) {
+  @media (min-width: 1200px) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  @media (min-width: 1500px) {
+  @media (min-width: 1400px) {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 `;
@@ -66,15 +66,15 @@ export const BottomContent = styled.div`
 `;
 
 export const LeftSide = styled.div`
-  flex: 0.6;
-  max-width: 60%;
+  flex: 0.7;
+  max-width: 70%;
   display: flex;
   flex-direction: column;
   gap: 32px;
 `;
 export const RightSide = styled.div`
-  flex: 0.4;
-  max-width: 40%;
+  flex: 0.3;
+  max-width: 30%;
 `;
 
 export const FruitsContainer = styled.div`
@@ -88,8 +88,28 @@ export const FruitTitle = styled.div`
 `;
 export const FruitList = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 15px;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 `;
 
 export const BlogContainer = styled.div`
@@ -120,6 +140,26 @@ export const TreeTitle = styled.div`
 `;
 export const TreeList = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 15px;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 `;

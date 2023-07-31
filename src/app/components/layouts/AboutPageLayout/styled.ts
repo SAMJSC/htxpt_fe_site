@@ -8,5 +8,6 @@ export const AboutPageLayoutContainer = styled.div`
 `;
 export const BodyPage = styled.div`
   border-radius: 8px;
+  min-height: 50vh;
 `;
 export const AboutButtonOptions = styled.div``;

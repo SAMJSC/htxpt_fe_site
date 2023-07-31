@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 
-import GardenerCard, { GardenerProps } from '@/app/components/atoms/Card/Gardener';
+import GardenerCard, { GardenerProps } from '@/app/components/modules/Card/Gardener';
 import { FavoriteGardenersPageContentContainer } from '@/app/components/modules/PageContent/FavoriteGardenersPageContent/styled';
 import { gardenersList } from '@/app/constants/common';
 

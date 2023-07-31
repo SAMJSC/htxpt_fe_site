@@ -8,7 +8,7 @@ import { NextPageWithLayout } from '@/pages/_app';
 
 const ProductFruitsPage: NextPageWithLayout = (): React.ReactElement => {
   const renderContent = useCallback(() => {
-    return <FruitsPageContent productList={productsList} />;
+    return <FruitsPageContent listProducts={productsList} />;
   }, []);
   return renderContent();
 };

@@ -7,7 +7,7 @@ import {
   ContentLine,
   ImageContainer,
   Title,
-} from '@/app/components/atoms/Card/Product/styled';
+} from '@/app/components/modules/Card/Product/styled';
 import { GARDENER_TEXT, STATUS_TEXT } from '@/app/types/common';
 import { PRODUCT_STATUS, ProductStatusCode } from '@/app/types/product';
 

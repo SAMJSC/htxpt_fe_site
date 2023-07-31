@@ -1,11 +1,11 @@
 import React, { useCallback, useState } from 'react';
 
-import BlogCard, { BlogCardProp } from '@/app/components/atoms/Card/Blog';
-import GardenerCard, { GardenerProps } from '@/app/components/atoms/Card/Gardener';
-import ProductCard, { ProductCardProps } from '@/app/components/atoms/Card/Product';
 import HomeAbout from '@/app/components/atoms/HomeAbout';
 import ScrollSnapBase from '@/app/components/atoms/ScrollSnapBase';
 import Slide from '@/app/components/atoms/Slide';
+import BlogCard, { BlogCardProp } from '@/app/components/modules/Card/Blog';
+import GardenerCard, { GardenerProps } from '@/app/components/modules/Card/Gardener';
+import ProductCard, { ProductCardProps } from '@/app/components/modules/Card/Product';
 import {
   BlogContainer,
   BlogList,

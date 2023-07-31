@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import React, { useCallback } from 'react';
 
-import { BlogCardProp } from '@/app/components/atoms/Card/Blog';
+import { BlogCardProp } from '@/app/components/modules/Card/Blog';
 import HomeContent from '@/app/components/modules/HomeContent';
 import { gardenersList, productsList } from '@/app/constants/common';
 import { Nature } from '~/public/images';

@@ -6,11 +6,12 @@ export const ProductDetailInfoContainer = styled.div<{ backgroundImage: string }
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-radius: 8px;
+  padding: 33px;
 `;
 
 export const ProductDetailContentContainer = styled.div`

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ProductCardProps } from '@/app/components/atoms/Card/Product';
+import { ProductCardProps } from '@/app/components/modules/Card/Product';
 
 export const Container = styled.div`
   display: flex;
@@ -22,15 +22,32 @@ export const ImageContainer = styled.div<Pick<ProductCardProps, 'image'>>`
   height: 15vw;
   width: 100%;
 
-  @media (max-width: 1400px) {
+  @media (min-width: 640px) {
     height: 20vw;
   }
-  @media (max-width: 1024px) {
-    height: 25vw;
+
+  @media (min-width: 768px) {
+    height: 28vw;
   }
 
-  @media (max-width: 768px) {
-    height: 25vw;
+  @media (min-width: 1024px) {
+    height: 18vw;
+  }
+
+  @media (min-width: 1200px) {
+    height: 18vw;
+  }
+
+  @media (min-width: 1250px) {
+    height: 17vw;
+  }
+
+  @media (min-width: 1300px) {
+    height: 16vw;
+  }
+
+  @media (min-width: 1500px) {
+    height: 15vw;
   }
 `;
 

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Icon from '@/app/components/atoms/Icon';
 import {
   BodyItem,
   BodyItemContent,
@@ -11,8 +12,7 @@ import {
   ImageContainer,
   LikeIcon,
   RatingStar,
-} from '@/app/components/atoms/Card/Gardener/styled';
-import Icon from '@/app/components/atoms/Icon';
+} from '@/app/components/modules/Card/Gardener/styled';
 import { theme } from '@/app/components/modules/ThemeProvider/theme';
 
 export type GardenerProps = {
@@ -37,9 +37,10 @@ const GardenerCard = ({
   phoneNumber,
   products,
   ratingStart,
+  onClick,
 }: GardenerProps): React.ReactElement => {
   return (
-    <Container>
+    <Container onClick={onClick}>
       <ImageContainer image={image}>
         <LikeIcon onClick={onHeartIconClick}>
           <Icon name={isLiked ? 'ic_heart_fill' : 'ic_heart_outline'} />

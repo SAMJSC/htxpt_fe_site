@@ -1,5 +1,5 @@
-import { GardenerProps } from '@/app/components/atoms/Card/Gardener';
-import { ProductCardProps } from '@/app/components/atoms/Card/Product';
+import { GardenerProps } from '@/app/components/modules/Card/Gardener';
+import { ProductCardProps } from '@/app/components/modules/Card/Product';
 import {
   FRUITS_TYPE,
   FruitsCheckBoxType,
@@ -15,6 +15,8 @@ export const FRUIT_TITLE = 'Phân Loại Quả';
 export const BLOG_TITLE = 'Bài viết mới nhất';
 export const TREE_TITLE = 'Phân Loại Quả';
 export const EMPTY_PAGE_TEXT = 'Chưa có thông tin';
+
+export type GardenerDetailTabCode = 'FRUITS' | 'TREES';
 
 export const gardenersList: GardenerProps[] = [
   {
@@ -169,3 +171,7 @@ export const SELL_POLICY_TEXT = 'Chính sách bán hàng';
 export const REFUND_POLICY_TEXT = 'Chính sách đổi trả';
 
 export const DELIVERY_POLICY_TEXT = 'Chính sách giao hàng';
+
+export const FAVORITE_TEXT = 'Yêu thích';
+
+export const MESSAGE_TEXT = 'Nhắn tin';

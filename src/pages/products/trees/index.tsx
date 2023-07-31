@@ -8,7 +8,7 @@ import { NextPageWithLayout } from '@/pages/_app';
 
 const ProductTreesPage: NextPageWithLayout = (): React.ReactElement => {
   const renderContent = useCallback(() => {
-    return <TreesPageContent productList={productsList} />;
+    return <TreesPageContent listProducts={productsList} />;
   }, []);
   return renderContent();
 };
