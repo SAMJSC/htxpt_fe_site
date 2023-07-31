@@ -1,6 +1,13 @@
 import { InputHTMLAttributes } from 'react';
 
 import { ICONS } from '@/app/components/atoms/Icon';
+import { GardenerDetailTabCode } from '@/app/constants/common';
+
+export type TabBase = {
+  code: GardenerDetailTabCode;
+  label: string | number;
+  subLabel?: string | number;
+};
 
 export type TestReturn = {
   data: {

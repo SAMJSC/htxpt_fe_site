@@ -20,16 +20,32 @@ export const ImageContainer = styled.div<{ image: string }>`
   background-size: cover;
   height: 15vw;
   width: 100%;
-
-  @media (max-width: 1400px) {
+  @media (min-width: 640px) {
     height: 20vw;
   }
-  @media (max-width: 1024px) {
-    height: 25vw;
+
+  @media (min-width: 768px) {
+    height: 28vw;
   }
 
-  @media (max-width: 768px) {
-    height: 25vw;
+  @media (min-width: 1024px) {
+    height: 18vw;
+  }
+
+  @media (min-width: 1200px) {
+    height: 18vw;
+  }
+
+  @media (min-width: 1250px) {
+    height: 17vw;
+  }
+
+  @media (min-width: 1300px) {
+    height: 16vw;
+  }
+
+  @media (min-width: 1500px) {
+    height: 15vw;
   }
 `;
 
@@ -79,20 +95,13 @@ export const ContentBody = styled.div`
   margin-top: 10px;
 `;
 
-// export const BodyItemContent = styled.div`
-//   white-space: nowrap;
-//   overflow: hidden;
-//   text-overflow: ellipsis;
-// `;
-
 export const BodyItemContent = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 90%; // Prevent long texts from overflowing
+  max-width: 90%;
 
   @media (min-width: 768px) {
-    // when screen is larger, allow more width
     max-width: 95%;
   }
 `;

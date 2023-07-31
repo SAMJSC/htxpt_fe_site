@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import React, { PropsWithChildren, useCallback } from 'react';
+import React, { PropsWithChildren } from 'react';
 
 import AboutButtonCategories from '@/app/components/atoms/AboutButtonCategories';
 import GardenerButtonCategories from '@/app/components/atoms/GardenersButtonCategories';
@@ -10,39 +10,23 @@ import {
   BodyPage,
 } from '@/app/components/layouts/AboutPageLayout/styled';
 
-type Props = {
-  headerNode?: React.ReactNode;
-};
-
-const AboutPageLayout = ({
-  headerNode,
-  children,
-}: PropsWithChildren<Props>): React.ReactElement => {
+const AboutPageLayout = ({ children }: PropsWithChildren): React.ReactElement => {
   const route = useRouter();
 
-  const renderAboutHeader = useCallback(() => {
-    if (headerNode) return headerNode;
-    return <AboutButtonCategories />;
-  }, [headerNode]);
+  let HeaderComponent;
 
-  const renderGardenerListHeader = useCallback(() => {
-    if (headerNode) return headerNode;
-    return <GardenerButtonCategories />;
-  }, [headerNode]);
-
-  const renderProductsListHeader = useCallback(() => {
-    if (headerNode) return headerNode;
-    return <ProductsTypeButtons />;
-  }, [headerNode]);
+  if (route.pathname.includes('about')) {
+    HeaderComponent = AboutButtonCategories;
+  } else if (route.pathname.includes('products')) {
+    HeaderComponent = ProductsTypeButtons;
+  } else {
+    HeaderComponent = GardenerButtonCategories;
+  }
 
   return (
     <AboutPageLayoutContainer>
       <AboutButtonOptions>
-        {route.pathname.includes('about')
-          ? renderAboutHeader()
-          : route.pathname.includes('products')
-          ? renderProductsListHeader()
-          : renderGardenerListHeader()}
+        <HeaderComponent />
       </AboutButtonOptions>
       <BodyPage>{children}</BodyPage>
     </AboutPageLayoutContainer>

@@ -1,18 +1,19 @@
 import React from 'react';
 
-import ProductCard, { ProductCardProps } from '@/app/components/atoms/Card/Product';
+import { ProductCardProps } from '@/app/components/modules/Card/Product';
+import ListProducts from '@/app/components/modules/ListProducts';
 import {
-  ListTreeItems,
+  ListProductsContainer,
   TreesPageContentContainer,
 } from '@/app/components/modules/PageContent/TreesPageContent/styled';
 import ProductDetailInfo from '@/app/components/modules/ProductDetailInfo';
 import { DemoFruit, FruitInfoBg } from '~/public/images';
 
 type TreesPageContentProps = {
-  productList: ProductCardProps[];
+  listProducts: ProductCardProps[];
 };
 
-const TreesPageContent = ({ productList }: TreesPageContentProps): React.ReactElement => {
+const TreesPageContent = ({ listProducts }: TreesPageContentProps): React.ReactElement => {
   return (
     <TreesPageContentContainer>
       <ProductDetailInfo
@@ -22,17 +23,9 @@ const TreesPageContent = ({ productList }: TreesPageContentProps): React.ReactEl
         height={[1, 1.5]}
         fruitQuantity={3}
       />
-      <ListTreeItems>
-        {productList.map((product: ProductCardProps, index: number) => (
-          <ProductCard
-            key={product.gardener + index}
-            gardener={product.gardener}
-            image={product.image}
-            status={product.status}
-            title={product.title}
-          />
-        ))}
-      </ListTreeItems>
+      <ListProductsContainer>
+        <ListProducts listProducts={listProducts} />
+      </ListProductsContainer>
     </TreesPageContentContainer>
   );
 };

@@ -6,7 +6,7 @@ import {
   ImageContainer,
   ShortDescription,
   Title,
-} from '@/app/components/atoms/Card/Blog/styled';
+} from '@/app/components/modules/Card/Blog/styled';
 
 export type BlogCardProp = {
   image: string;

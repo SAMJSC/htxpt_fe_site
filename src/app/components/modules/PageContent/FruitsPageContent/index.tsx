@@ -1,11 +1,12 @@
 import React from 'react';
 
-import ProductCard, { ProductCardProps } from '@/app/components/atoms/Card/Product';
 import Checkbox from '@/app/components/atoms/Checkbox';
+import { ProductCardProps } from '@/app/components/modules/Card/Product';
+import ListProducts from '@/app/components/modules/ListProducts';
 import {
   FruitsPageContentContainer,
   FruitsTypeOptionsContainer,
-  ListFruitItems,
+  ListProductsContainer,
 } from '@/app/components/modules/PageContent/FruitsPageContent/styled';
 import ProductDetailInfo from '@/app/components/modules/ProductDetailInfo';
 import { FruitsCheckBox } from '@/app/constants/common';
@@ -13,10 +14,10 @@ import { FruitsCheckBoxType } from '@/app/types/common';
 import { DemoFruit, FruitInfoBg } from '~/public/images';
 
 type FruitsPageContentProps = {
-  productList: ProductCardProps[];
+  listProducts: ProductCardProps[];
 };
 
-const FruitsPageContent = ({ productList }: FruitsPageContentProps): React.ReactElement => {
+const FruitsPageContent = ({ listProducts }: FruitsPageContentProps): React.ReactElement => {
   return (
     <FruitsPageContentContainer>
       <FruitsTypeOptionsContainer>
@@ -31,17 +32,9 @@ const FruitsPageContent = ({ productList }: FruitsPageContentProps): React.React
         diameter={[15, 20]}
         weight={[1.5, 3]}
       />
-      <ListFruitItems>
-        {productList.map((product: ProductCardProps, index: number) => (
-          <ProductCard
-            key={product.gardener + index}
-            gardener={product.gardener}
-            image={product.image}
-            status={product.status}
-            title={product.title}
-          />
-        ))}
-      </ListFruitItems>
+      <ListProductsContainer>
+        <ListProducts listProducts={listProducts} />
+      </ListProductsContainer>
     </FruitsPageContentContainer>
   );
 };

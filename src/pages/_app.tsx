@@ -9,7 +9,7 @@ import { ThemeProvider } from 'styled-components';
 
 import DefaultLayout from '@/app/components/layouts/DefaultLayout';
 import { theme } from '@/app/components/modules/ThemeProvider/theme';
-import { store } from '@/app/store';
+import { store } from '@/app/features/store';
 
 const inter = Inter({ subsets: ['latin'], weight: ['400', '600', '700'] });
 

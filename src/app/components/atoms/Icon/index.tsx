@@ -17,15 +17,18 @@ import IcLayoutOutline from '@/app/components/atoms/Icon/IcLayoutOutline';
 import IcLocationOutline from '@/app/components/atoms/Icon/IcLocationOutline';
 import IcMenuOutline from '@/app/components/atoms/Icon/IcMenuOutline';
 import IcMessageOutline from '@/app/components/atoms/Icon/IcMessageOutline';
+import IcMessageSquareOutline from '@/app/components/atoms/Icon/IcMessageSquareOutline';
 import IcNotificationOutline from '@/app/components/atoms/Icon/IcNotificationOutline';
 import IcPhoneOutline from '@/app/components/atoms/Icon/IcPhoneOutline';
 import IcSearchFilter from '@/app/components/atoms/Icon/IcSearchFilter';
 import IcSearchOutline from '@/app/components/atoms/Icon/IcSearchOutline';
 import IcSettingOutline from '@/app/components/atoms/Icon/IcSettingOutline';
 import IcShareOutline from '@/app/components/atoms/Icon/IcShareOutline';
+import IcStarOutline from '@/app/components/atoms/Icon/IcStarOutline';
 import IcStart from '@/app/components/atoms/Icon/IcStart';
 import IcTreesOutline from '@/app/components/atoms/Icon/IcTreesOutline';
 import IcUnCheckedBox from '@/app/components/atoms/Icon/IcUnCheckedBox';
+import IcUserCheckOutline from '@/app/components/atoms/Icon/IcUserCheckOutline';
 import IcUserOutline from '@/app/components/atoms/Icon/IcUserOutline';
 import { Container } from '@/app/components/atoms/Icon/styled';
 import { TIcon } from '@/app/types/common';
@@ -60,6 +63,9 @@ export const ICONS = {
   ic_search_outline: IcSearchOutline,
   ic_fruit_outline: IcFruitOutline,
   ic_trees_outline: IcTreesOutline,
+  ic_user_check_outline: IcUserCheckOutline,
+  ic_star_outline: IcStarOutline,
+  ic_message_quare_outline: IcMessageSquareOutline,
 } as const;
 
 const Icon = ({ name, size = 24, color = 'currentColor', ...props }: TIcon) => {

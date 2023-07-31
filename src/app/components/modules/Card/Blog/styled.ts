@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BlogCardProp } from '@/app/components/atoms/Card/Blog';
+import { BlogCardProp } from '@/app/components/modules/Card/Blog';
 
 export const Container = styled.div`
   width: 100%;

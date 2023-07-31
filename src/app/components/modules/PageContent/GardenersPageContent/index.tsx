@@ -1,11 +1,20 @@
+import { useRouter } from 'next/router';
 import React, { useCallback, useState } from 'react';
 
-import GardenerCard, { GardenerProps } from '@/app/components/atoms/Card/Gardener';
+import GardenerCard, { GardenerProps } from '@/app/components/modules/Card/Gardener';
 import { GardenersPageContentContainer } from '@/app/components/modules/PageContent/GardenersPageContent/styled';
 import { gardenersList } from '@/app/constants/common';
 
 const GardenersPageContent = (): React.ReactElement => {
   const [gardenerLikes, setGardenerLikes] = useState<string[]>([]);
+  const router = useRouter();
+
+  const handleGardenerClick = useCallback(
+    (id: string) => {
+      router.push(`/gardeners/${id}/fruits`);
+    },
+    [router]
+  );
 
   const handleHeartIconClicked = useCallback(
     (id: string) => {
@@ -23,6 +32,7 @@ const GardenersPageContent = (): React.ReactElement => {
     <GardenersPageContentContainer>
       {gardenersList.map((gardener: GardenerProps, index: number) => (
         <GardenerCard
+          onClick={() => handleGardenerClick(gardener.id)}
           id={gardener.id}
           onHeartIconClick={() => handleHeartIconClicked(gardener.id)}
           key={gardener.gardenerName + index}

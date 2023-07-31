@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
-export const TreesPageContentContainer = styled.div``;
-
-export const ListTreeItems = styled.div`
-  margin-top: 32px;
+export const ListProductsContainer = styled.div`
   display: grid;
   grid-gap: 12.5px;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -20,15 +17,11 @@ export const ListTreeItems = styled.div`
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  @media (min-width: 1400px) {
+  @media (min-width: 1200px) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  @media (min-width: 1500px) {
+  @media (min-width: 1400px) {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
-`;
-
-export const ListProductsContainer = styled.div`
-  margin-top: 32px;
 `;
