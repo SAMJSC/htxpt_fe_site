@@ -23,13 +23,13 @@ const AboutUsPageContent: NextPage = (): React.ReactElement => {
       <div className="flex flex-col space-y-12 md:flex-row md:space-x-16 md:space-y-0">
         <div className="flex flex-col space-y-12">
           <div className="flex flex-col items-start space-y-7">
-            <div className="border-b-[3px] border-gray-300 text-[24px] font-bold text-primary decoration-light_grey md:text-[36px]">
+            <div className="text-primary decoration-light_grey border-b-[3px] border-gray-300 text-[24px] font-bold md:text-[36px]">
               {VISION_TITLE_TEXT}
             </div>
             <div className="font-body">{VISION_CONTENT_TEXT}</div>
           </div>
           <div className="flex flex-col items-start space-y-7 text-left md:items-end md:text-right">
-            <div className="border-b-[3px] border-gray-300 text-[24px] font-bold text-primary decoration-light_grey md:text-[36px]">
+            <div className="text-primary decoration-light_grey border-b-[3px] border-gray-300 text-[24px] font-bold md:text-[36px]">
               {MISSION_TITLE_TEXT}
             </div>
             <div className="font-body">{MISSION_CONTENT_TEXT}</div>
@@ -41,7 +41,7 @@ const AboutUsPageContent: NextPage = (): React.ReactElement => {
               <div className="w-30 h-42 relative z-10 mr-[20px] rounded-lg">
                 <Image width={122} height={169} src={CEOAvatar.src} alt="avatar" />
               </div>
-              <div className="ml-[-120px] flex h-[132px] w-full flex-col items-end rounded-lg bg-primary p-3 text-white shadow-md">
+              <div className="bg-primary ml-[-120px] flex h-[132px] w-full flex-col items-end rounded-lg p-3 text-white shadow-md">
                 <div className="font-bold">
                   {GENDER} {CEO_NAME}
                 </div>
@@ -49,16 +49,16 @@ const AboutUsPageContent: NextPage = (): React.ReactElement => {
               </div>
             </div>
             <div className="text-center text-[14px] font-light md:text-left md:text-[18px]">
-              <span className="font-semibold text-primary">“ Đoàn kết</span> là sức mạnh… khi có sự
-              <span className="font-semibold text-primary"> chung sức</span> và{' '}
-              <span className="font-semibold text-primary">hợp tác</span>, tiếng Anh có thể đạt được
-              những điều <span className="font-semibold text-primary">tuyệt vời. ”</span>
+              <span className="text-primary font-semibold">“ Đoàn kết</span> là sức mạnh… khi có sự
+              <span className="text-primary font-semibold"> chung sức</span> và{' '}
+              <span className="text-primary font-semibold">hợp tác</span>, tiếng Anh có thể đạt được
+              những điều <span className="text-primary font-semibold">tuyệt vời. ”</span>
             </div>
           </div>
         </div>
       </div>
       <div className="flex flex-col space-y-7 pb-5">
-        <div className="w-fit border-b-[3px] border-gray-300 text-[24px] font-bold text-primary decoration-light_grey md:text-[36px]">
+        <div className="text-primary decoration-light_grey w-fit border-b-[3px] border-gray-300 text-[24px] font-bold md:text-[36px]">
           {CORE_VALUE_TITLE_TEXT}
         </div>
         <div>
@@ -67,12 +67,12 @@ const AboutUsPageContent: NextPage = (): React.ReactElement => {
             {CoreValueItem.map((item: CoreValueContentItem) => (
               <div
                 key={item.content}
-                className="relative mx-2 my-2.5 flex max-w-[150px] grow flex-col items-center space-y-1 md:max-w-[237px]"
+                className="relative mx-2 my-2.5 flex grow flex-col items-center space-y-1 md:max-w-[237px]"
               >
                 <div className="relative h-[50px] w-full md:h-[100px]">
                   <Image src={item.image} layout="fill" objectFit="contain" alt="Core Value" />
                 </div>
-                <div className="font-semibold text-primary">{item.title}</div>
+                <div className="text-primary font-semibold">{item.title}</div>
                 <div className="font-body text-center">{item.content}</div>
               </div>
             ))}
